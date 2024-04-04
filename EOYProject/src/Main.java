@@ -5,7 +5,7 @@ public class Main extends JFrame{
 	private static final int WIDTH =800;
 	private static final int HEIGHT=600;
 	public Main () {
-		super("Haunted House");
+		super("EOY Project");
 		setSize(WIDTH, HEIGHT);
 		//Game play = new Game();
 		//((Component) play).setFocusable(true);
