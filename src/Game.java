@@ -29,12 +29,12 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		l = new Sound();
 		new Thread(this).start();
 		this.addKeyListener(this);
-		r1=new Box1("grinch.png",250,260,75,75,0,0);
-		r2=new Box1("giftt.png",500,260,20,20,0,0);
-		r3=new Box1("bagg.png",75,100,200,350,0,0);
-		r4=new Box1("snowfield.jpg",0,0,800,600,0,0);
-		r5=new Box1("santaa.png",520,230,185,180,0,0);
-		r6=new Box1("ordd.png",1,1,100,100,3,3);
+		r1=new Box1("rond.png",250,260,65,100,0,0);
+		r2=new Box1("boly.png",500,260,20,20,0,0);
+		r3=new Box1("gal.png",5,50,200,450,0,0);
+		r4=new Box1("pkk.png",0,0,800,600,0,0);
+		r5=new Box1("mesilol.png",520,100,100,180,0,0);
+		r6=new Box1("cam.png",1,1,100,100,3,3);
 		//455
 		//r1=new Box();
 		//r2=new Box(400,300,70,90,2,1);
@@ -93,11 +93,11 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		g2d.drawImage(new ImageIcon(r6.getPic()).getImage(),r6.getX(),r6.getY(),r6.getW(),r6.getH(),this);
 		g2d.setColor(Color.green);
 		g2d.setFont(new Font ("Impact", Font.PLAIN, 36));
-		g2d.drawString("Presents Stolen: "+String.valueOf(gscore), 50, 50);
-		g2d.drawString("December 25th",kx, 500);
+		g2d.drawString("Goals Saved: "+String.valueOf(gscore), 50, 50);
+		//g2d.drawString("lol",kx, 500);
 		g2d.setColor(Color.red);
-		g2d.drawString("Gifts in Bag: "+String.valueOf(kscore), kx, 50);
-		g2d.drawString("Christmas",200,500);
+		g2d.drawString("Goals Scored: "+String.valueOf(kscore), kx, 50);
+		//g2d.drawString("soccer",200,500);
 		g2d.drawString("Zlatan's Score: "+String.valueOf(kscore), zx, 50);
 		
 		
