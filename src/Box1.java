@@ -108,4 +108,9 @@ public void bounce1(int w1, int h1) {
 		return getX()+getW()>=b.getX()&&getX()<=b.getX()+b.getW()&&
 				getY()+getH()>=b.getY()&&getY()<=b.getY()+b.getH();
 	}
+
+	public void setPic(String string) {
+		pic = string;
+		
+	}
 }

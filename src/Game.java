@@ -22,10 +22,10 @@ public class Game extends JPanel implements Runnable, KeyListener{
 	private Box1 r3;//White Goal
 	private Box1 r4;//Grass
 	private Box1 r5;//zlatan
-	private Box1 r6;//ordament
+	//private Box1 r6;//ordament
 	
 	public Game() {
-		back=null;
+		back=null;	
 		p = new Sound();
 		l = new Sound();
 		new Thread(this).start();
@@ -35,7 +35,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		r3=new Box1("gal.png",5,50,200,450,0,0);
 		r4=new Box1("pkk.png",0,0,800,600,0,0);
 		r5=new Box1("mesilol.png",520,100,100,180,0,0);
-		r6=new Box1("cam.png",1,1,100,100,3,3);
+		//r6=new Box1("cam.png",1,1,100,100,3,3);
 		//455
 		//r1=new Box();
 		//r2=new Box(400,300,70,90,2,1);
@@ -91,7 +91,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		g2d.drawImage(new ImageIcon(r2.getPic()).getImage(),r2.getX(),r2.getY(),r2.getW(),r2.getH(),this);
 		g2d.drawImage(new ImageIcon(r5.getPic()).getImage(),r5.getX(),r5.getY(),r5.getW(),r5.getH(),this);
 		g2d.drawImage(new ImageIcon(r3.getPic()).getImage(),r3.getX(),r3.getY(),r3.getW(),r3.getH(),this);
-		g2d.drawImage(new ImageIcon(r6.getPic()).getImage(),r6.getX(),r6.getY(),r6.getW(),r6.getH(),this);
+		//g2d.drawImage(new ImageIcon(r6.getPic()).getImage(),r6.getX(),r6.getY(),r6.getW(),r6.getH(),this);
 		g2d.setColor(Color.green);
 		g2d.setFont(new Font ("Impact", Font.PLAIN, 36));
 		g2d.drawString("Goals Saved: "+String.valueOf(gscore), 50, 50);
@@ -134,7 +134,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 	public void move(int w1,int h1) {
 		r1.move(w1,h1);
 		r2.move(w1,h1);
-		r6.bounce1(w1,h1);
+		//r6.bounce1(w1,h1);
 	}
 	public void keyTyped(KeyEvent e) {
 		
@@ -142,18 +142,20 @@ public class Game extends JPanel implements Runnable, KeyListener{
 	public void keyPressed(KeyEvent e) {
 		key=e.getKeyCode();
 
-		if(key==74) {//cheatcode
+		if(key==73) {//i
 			gscorex++;
 		}
-		if(key==75) {//cheatcodekicker
-			r5.setX(455);
-			//kx=-400;
-			//zx=400;
-			kscorex++;
-			//else {
-				//kx=400;
-				//zx=-300;
-			//;}
+		if(key==74) {//j
+			r5.setPic("pulisic.jpg");
+		}
+		if(key==75) {//K
+			r5.setPic("mesilol.png");
+		}
+		if(key==76) {//L
+			r5.setPic("ronaldo.jpg");
+		}
+		if(key==77) {//M
+			r5.setPic("rodrygo.jpg");
 		}
 		gs=-3;
 		gds=3;
