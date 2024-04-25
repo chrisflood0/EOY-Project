@@ -4,7 +4,7 @@ import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
 public class Game extends JPanel implements Runnable, KeyListener{
-	//hi chris!!
+	
 	private BufferedImage back;
 	private Sound p;
 	private Sound l;
