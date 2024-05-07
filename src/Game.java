@@ -162,16 +162,16 @@ public class Game extends JPanel implements Runnable, KeyListener{
 			gscorex++;
 		}
 		if(key==74) {//j
-			r5.setPic("pulisic.jpg");
+			r5.setPic("Usa.png");
 		}
 		if(key==75) {//K
-			r5.setPic("mesilol.png");
+			r5.setPic("Arg.png");
 		}
 		if(key==76) {//L
-			r5.setPic("ronaldo.jpg");
+			r5.setPic("Por.png");
 		}
 		if(key==77) {//M
-			r5.setPic("rodrygo.jpg");
+			r5.setPic("Bra.png");
 		}
 		gs=-3;
 		gds=3;
