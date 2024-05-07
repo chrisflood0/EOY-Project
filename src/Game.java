@@ -34,7 +34,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		r2=new Box1("boly.png",500,260,20,20,0,0);
 		r3=new Box1("gal.png",5,50,200,450,0,0);
 		r4=new Box1("pkk.png",0,0,800,600,0,0);
-		r5=new Box1("mesilol.png",520,100,100,180,0,0);
+		r5=new Box1("mesiloli.png",520,100,100,180,0,0);
 		//r6=new Box1("cam.png",1,1,100,100,3,3);
 		//455
 		//r1=new Box();
@@ -92,6 +92,15 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		g2d.drawImage(new ImageIcon(r5.getPic()).getImage(),r5.getX(),r5.getY(),r5.getW(),r5.getH(),this);
 		g2d.drawImage(new ImageIcon(r3.getPic()).getImage(),r3.getX(),r3.getY(),r3.getW(),r3.getH(),this);
 		//g2d.drawImage(new ImageIcon(r6.getPic()).getImage(),r6.getX(),r6.getY(),r6.getW(),r6.getH(),this);
+		g2d.setFont(new Font ("Impact", Font.PLAIN, 37));
+		g2d.setColor(Color.black);
+		g2d.drawString("K=Argentina", 10,550);
+		
+		g2d.drawString("J=USA", 250,550);
+		
+		g2d.drawString("L=Portugal", 400,550);
+		
+		g2d.drawString("M=Brazil", 601,550);
 		g2d.setColor(Color.green);
 		g2d.setFont(new Font ("Impact", Font.PLAIN, 36));
 		g2d.drawString("Goals Saved: "+String.valueOf(gscore), 50, 50);
@@ -100,7 +109,14 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		g2d.drawString("Goals Scored: "+String.valueOf(kscore), kx, 50);
 		//g2d.drawString("soccer",200,500);
 		g2d.drawString("Zlatan's Score: "+String.valueOf(kscore), zx, 50);
-		
+		g2d.setColor(Color.blue);
+		g2d.drawString("K=Argentina", 10,550);
+		g2d.setColor(Color.white);
+		g2d.drawString("J=USA", 250,550);
+		g2d.setColor(Color.red);
+		g2d.drawString("L=Portugal", 400,550);
+		g2d.setColor(Color.GREEN);
+		g2d.drawString("M=Brazil", 600,550);
 		
 		//400
 		g2d.setColor(Color.red);
