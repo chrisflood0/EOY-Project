@@ -31,9 +31,9 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		new Thread(this).start();
 		this.addKeyListener(this);
 		r1=new Box1("rond.png",250,260,65,100,0,0);
-		r2=new Box1("boly.png",500,260,20,20,0,0);
-		r3=new Box1("gal.png",5,50,200,450,0,0);
-		r4=new Box1("pkk.png",0,0,800,600,0,0);
+		r2=new Box1("boly.png",550,300,20,20,0,0);
+		r3=new Box1("goal.png",15,50,210,500,0,0);
+		r4=new Box1("lol.png",0,0,800,600,0,0);
 		r5=new Box1("mesiloli.png",520,100,100,180,0,0);
 		//r6=new Box1("cam.png",1,1,100,100,3,3);
 		//455
