@@ -30,13 +30,13 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		l = new Sound();
 		new Thread(this).start();
 		this.addKeyListener(this);
-		r1=new Box1("rond.png",250,260,65,100,0,0);
-		r2=new Box1("boly.png",550,300,20,20,0,0);
-		r3=new Box1("goal.png",15,50,210,500,0,0);
+		r1=new Box1("goalie.png",200,260,90,150,0,0);
+		r2=new Box1("boly.png",550,300,30,30,0,0);
+		r3=new Box1("goal.png",15,50,210,550,0,0);
 		r4=new Box1("lol.png",0,0,800,600,0,0);
-		r5=new Box1("mesiloli.png",520,100,100,180,0,0);
+		r5=new Box1("mesiloli.png",580,185,90,150,0,0);
 		//r6=new Box1("cam.png",1,1,100,100,3,3);
-		//455
+		//45
 		//r1=new Box();
 		//r2=new Box(400,300,70,90,2,1);
 		key=-1;
@@ -120,15 +120,15 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		
 		//400
 		g2d.setColor(Color.red);
-		g2d.setFont(new Font ("chiller", Font.BOLD, 100));
+		g2d.setFont(new Font ("Impact", Font.BOLD, 60));
 		if (kscore>= 15 ) {
 			///l.playmusic("loss.wav");
-			g2d.drawString("You LOSE",235, 300);
+			g2d.drawString("Kicker Wins Vs GoaLe Loses",15, 300);
 		}
 		g2d.setColor(Color.green);
-		g2d.setFont(new Font ("Impact", Font.PLAIN, 100));
-		if (gscore>= 10 && kscore<15) {
-			g2d.drawString("You WIN",235, 300);
+		g2d.setFont(new Font ("Impact", Font.PLAIN, 60));
+		if (gscore>= 15 && kscore<15) {
+			g2d.drawString("GoaLie Wins Vs Kicker Loses",15, 300);
 		}
 		move(getSize().width, getSize().height);
 		if(r2.Collision(r3))
@@ -187,7 +187,7 @@ public class Game extends JPanel implements Runnable, KeyListener{
 		//if(key==39)//right
 		//	r1.setDx(3);
 		if(key==32) {//Space
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			double dy=5*Math.random()-2.5;
 			resetBall();
 			r2.setDx(-3);
@@ -201,30 +201,35 @@ public class Game extends JPanel implements Runnable, KeyListener{
 			resetGoalie();
 		}
 		if(key==49){//topshot
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			r2.setDx(-3);
 			r2.setDy(-2);
 		}
 		if(key==50) {//upshot
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			r2.setDx(-3);
 			r2.setDy(-1);
 		}
 		if(key==51) {//downshot
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			r2.setDx(-3);
 			r2.setDy(1);
 		}
 		if(key==52) {//botttomshot
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			r2.setDx(-3);
 			r2.setDy(2);
 		}
 		if(key==53) {//middleshot
-			p.playmusic("hohoho.wav");
+			p.playmusic("kik.wav");
 			r2.setDx(-3);
 			r2.setDy(0);	
 		}
+	
+	if(key==83) {//middleshot
+		p.playmusic("zil.wav");
+			
+	}
 	}
 	public void keyReleased(KeyEvent e) {
 		key=e.getKeyCode();
@@ -240,13 +245,13 @@ public class Game extends JPanel implements Runnable, KeyListener{
 	public void resetBall() {
 		r2.setDx(0);
 		r2.setDy(0);
-		r2.setX(500);
-		r2.setY(260);
+		r2.setX(550);
+		r2.setY(300);
 	}
 	public void resetGoalie() {
 		r1.setDx(0);
 		r1.setDy(0);
-		r1.setX(250);
+		r1.setX(200);
 		r1.setY(260);
 	}
 	public void zlatan() {
